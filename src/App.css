@@ -1,38 +1,125 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300&display=swap');
+* {
+  font-family: 'Azeret Mono', monospace;
+}
+
+.btn {
+  width: 72px;
+  padding: 8px;
+  margin-right: 8px;
+  border-radius: 3px;
+  border: None;
+  font-weight: 600;
+}
+
+.footer {
+  color: rgb(133, 133, 133);
+  margin: 12px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.rd {
+  background-color: #FD6F96;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.gr {
+  background-color: #95DAC1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.or {
+  background-color: #FFEBA1;
+}
+
+.gy {
+  background-color: #E8E8E8;
+}
+
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #1f2125;
+  min-height: 100vh;
+  color: rgb(238, 238, 238);
 }
 
-.App-link {
-  color: #61dafb;
+.w320 {
+  width: 320px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.w310 {
+  width: 310px;
+}
+
+.btc {
+  padding-top: 16px;
+  padding-bottom: 8px;
+}
+
+.m0 {
+  margin: 0;  
+}
+
+.smol {
+  font-size: 12px;
+}
+
+.pb {
+  padding-bottom: 16px;
+}
+
+.tc {
+  text-align: end;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 280px;
+  background-color: #555;
+  color: #fff;
+  text-align: start;
+  padding: 5px;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 5;
+  width: 260px;
+  top: 100%;
+  left: -200%;
+ 
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;  /* At the top of the tooltip */
+  left: 90%;
+  margin-left: -5px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent #555 transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
